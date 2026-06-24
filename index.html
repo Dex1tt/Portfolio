@@ -1,129 +1,157 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Моя визитка</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stepway - Магазин стильных кроссовок</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="icon" href="logo.jpg">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            Stepway
-        </div>
-        <button class="burger" id="burger">☰</button>
-        <ul class="nav-links" id="nav-links">
-            <li>
-                <a href="#">Главная</a>
-            </li>
-            <li>
-                <a href="#models">Модели</a>
-            </li>
-            <li>
-                <a href="#features">О нас</a>
-            </li>
-        </ul>
+    <nav>
+    <a href="#about">Обо мне</a>
+    <a href="#skills">Мои навыки</a>
+    <a href="#contacts">Мои контакты</a>
+    <a href="#projects">Проекты</a>
     </nav>
-    <section class="hero">
-        <div class="hero-text">
-            <span>Новая коллекция</span>
-            <h1>Твои кроссовки. Твой стиль.</h1>
-            <p>Качественные и стильные кроссовки,с акцентом на качество,комфорт и актуальный дизайн.</p>
-            <a href="#models" class="btn">Смотреть коллекцию</a>
-        </div>
-            <div class="hero-image">
-                <img src="gr.snk.jpg" alt="Кроссовки Stepway Pro">
-            </div>
+    <header>
+    <img src="avatar.jpg" alt="Максим" class="avatar">
+        <h1>
+            Добро пожаловать!
+        </h1>
+        <p>
+            Меня зовут Максим. Я начинающий frontend разработчик.
+        </p>
+        <button id="theme-btn">🌙 Тёмная тема</button>
+    </header>
+    <main>
+    <section class="about" id="about">
+        <h2>Обо мне:</h2>
+        <p>
+            Мне 17 лет, я начинающий frontend разработчик. 
+            Изучаю веб-разработку 6 месяцев — осваиваю HTML, CSS и JavaScript. 
+            Стремлюсь создавать качественные и современные проекты.
+            Занимаюсь спортом — дисциплина в физической подготовке 
+            помогает мне быть дисциплинированным и в учёбе.
+        </p>
+    </section>     
+    <section class="skills" id="skills">
+        <h2>Навыки:</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Flexbox</li>
+            <li>JavaScript</li>
+            <li>localStorage</li>
+            <li>API</li>
+            <li>Chart.js</li>
+        </ul>
     </section>
-    <section class="stats">
-        <div class="stats-grid">
-        <div class="stat-item">
-            <h2>5000+</h2>
-            <p>покупателей</p>
-        </div>
-        <div class="stat-item">
-            <h2>3</h2>
-            <p>модели в коллекции</p>
-        </div>
-        <div class="stat-item">
-            <h2>5★</h2>
-            <p>рейтинг</p>
-        </div>
-    </div>
+    <section class="contacts" id="contacts">
+        <h2>Контакты:</h2>
+        <ul> 
+        <li>📧Email:
+            <a href="mailto:mgocarenko212@gmail.com">mgocarenko212@gmail.com</a>
+        </li>
+        <li>🐙Github
+            <a href="https://github.com/Dex1tt" target="_blank">github.com/Dex1tt</a>
+        </li>    
+        <li>✈️Telegram
+             <a href="https://t.me/Dex_1t">@Dex_1t</a>
+        </li>
+        </ul>
     </section>
-    <section class="models" id="models">
-        <h2>Наши модели</h2>
-        <div class="models-grid">
-            <div class="models-card">
-                <div class="card-img">
-                <img src="gr.snk.jpg" loading="lazy"  alt="Кроссовки Stepway Pro">
-                </div>
-                <h3 class="models-text">Stepway Pro</h3>
-                <p>8 990 ₽</p>
-                <button class="btn btn-buy">Купить</button>
+    <section class="projects" id="projects">
+        <h2>Проекты:</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+            <h3>Stepway - интернет-магазин обуви </h3>
+            <p>Cтильный и адаптивный лендинг для бренда кроссовок с современным дизайном и удобным интерфейсом</p>
+                <ul>
+                    <li>
+                        HTML
+                    </li>
+                    <li>
+                        CSS
+                    </li>
+                    <li>
+                        JS
+                    </li>
+                    <li>
+                        Adaptive
+                    </li>
+                </ul>
+                <a href="https://dex1tt.github.io/Stepway-Landing-Page/" class="project-link">Смотреть →</a>
             </div>
-            <div class="models-card">
-                <div class="card-img">
-                <img src="pi.snk.jpg" loading="lazy"  alt="Кроссовки Stepway Pro">
-                </div>
-                <h3 class="models-text">Stepway Mid</h3>
-                <p>6 490 ₽</p>
-                <button class="btn btn-buy">Купить</button>
+            <div class="project-card">
+            <h3>WeatherApp - сайт прогноза погоды</h3>
+            <p>Удобный сайт для проверки погоды в любом городе с динамическим фоном, который меняется в зависимости от условий, и анимированными иконками</p>
+                <ul>
+                    <li>
+                        HTML
+                    </li>
+                    <li>
+                        CSS
+                    </li>
+                    <li>
+                        JS
+                    </li>
+                    <li>
+                        API
+                    </li>
+                </ul>
+                <a href="https://dex1tt.github.io/weather-app/" class="project-link">Смотреть →</a>
             </div>
-            <div class="models-card">
-                <div class="card-img">
-                <img src="bl.snk.jpg" loading="lazy"  alt="Кроссовки Stepway Pro">
-                </div>
-                <h3 class="models-text">Stepway Air</h3>
-                <p>12 990 ₽</p>
-                <button class="btn btn-buy">Купить</button>
+            <div class="project-card">
+            <h3>Focus - Все задачи на своём месте </h3>
+            <p>Приложение для управления задачами на vanilla JS с фильтрами, счётчиком и сохранением в localStorage.</p>
+                <ul>
+                    <li>
+                        HTML
+                    </li>
+                    <li>
+                        CSS
+                    </li>
+                    <li>
+                        JS
+                    </li>
+                    <li>
+                        localStorage
+                    </li>
+                </ul>
+                <a href="https://dex1tt.github.io/todo-app/" class="project-link">Смотреть →</a>
+            </div>
+             <div class="project-card">
+            <h3>Cashwise - быстро и просто</h3>
+            <p>Cashwise — конвертер валют на vanilla JS с реальными курсами через ExchangeRate API. Реализованы история конвертаций, график курса за 7 дней, анимации и флаги валют.</p>
+                <ul>
+                    <li>
+                        HTML
+                    </li>
+                    <li>
+                        CSS
+                    </li>
+                    <li>
+                        JS
+                    </li>
+                    <li>
+                        API
+                    </li>
+                    <li>
+                        localStorage
+                    </li>
+                    <li>
+                        Chart.js
+                    </li>
+                </ul>
+                <a href="https://dex1tt.github.io/currency-app/" class="project-link">Смотреть →</a>
             </div>
         </div>
     </section>
-    <section class="features" id="features">
-        <h2>Кроссовки,которые выбирают
-            за качество и стиль.
-        </h2>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <h3>Комфорт</h3>
-                <p>Максимальное удобство для каждого дня.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Качество</h3>
-                <p>Надежные материалы и внимание к деталям.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Стиль</h3>
-                <p>Современный дизайн,который подчеркнет ваш образ.</p>
-            </div>
-        </div>
-    </section>
-    <footer class="footer">
-    <img src="logo.jpg" loading="lazy"  class="footer-logo">
-    <p class="footer-slogan">Больше, чем кроссовки.</p>
-    <div class="footer-links">
-        <a href="#">Главная</a>
-        <a href="#models">Модели</a>
-        <a href="#features">О нас</a>
-        <a href="#">Instagram</a>
-        <a href="#">Telegram</a>
-    </div>
-    <p class="footer-copy">© 2025 Stepway</p>
-</footer>
-<div class="modal" id="modal">
-    <div class="modal-content">
-        <button class="btn-close" id="btn-close">✕</button>
-        <h3>Оставить заявку</h3>
-        <input type="text" placeholder="Ваше имя">
-        <input type="tel" placeholder="Ваш телефон">
-        <button class="btn">Отправить</button>
-    </div>
-</div>
-<script src="script.js"></script>
+    </main>
+    <footer>
+        © 2026 Максим. Все права защищены.
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
