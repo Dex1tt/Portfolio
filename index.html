@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stepway - Магазин стильных кроссовок</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.jpg">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            Stepway
+        </div>
+        <button class="burger" id="burger">☰</button>
+        <ul class="nav-links" id="nav-links">
+            <li>
+                <a href="#">Главная</a>
+            </li>
+            <li>
+                <a href="#models">Модели</a>
+            </li>
+            <li>
+                <a href="#features">О нас</a>
+            </li>
+        </ul>
+    </nav>
+    <section class="hero">
+        <div class="hero-text">
+            <span>Новая коллекция</span>
+            <h1>Твои кроссовки. Твой стиль.</h1>
+            <p>Качественные и стильные кроссовки,с акцентом на качество,комфорт и актуальный дизайн.</p>
+            <a href="#models" class="btn">Смотреть коллекцию</a>
+        </div>
+            <div class="hero-image">
+                <img src="gr.snk.jpg" alt="Кроссовки Stepway Pro">
+            </div>
+    </section>
+    <section class="stats">
+        <div class="stats-grid">
+        <div class="stat-item">
+            <h2>5000+</h2>
+            <p>покупателей</p>
+        </div>
+        <div class="stat-item">
+            <h2>3</h2>
+            <p>модели в коллекции</p>
+        </div>
+        <div class="stat-item">
+            <h2>5★</h2>
+            <p>рейтинг</p>
+        </div>
+    </div>
+    </section>
+    <section class="models" id="models">
+        <h2>Наши модели</h2>
+        <div class="models-grid">
+            <div class="models-card">
+                <div class="card-img">
+                <img src="gr.snk.jpg" loading="lazy"  alt="Кроссовки Stepway Pro">
+                </div>
+                <h3 class="models-text">Stepway Pro</h3>
+                <p>8 990 ₽</p>
+                <button class="btn btn-buy">Купить</button>
+            </div>
+            <div class="models-card">
+                <div class="card-img">
+                <img src="pi.snk.jpg" loading="lazy"  alt="Кроссовки Stepway Pro">
+                </div>
+                <h3 class="models-text">Stepway Mid</h3>
+                <p>6 490 ₽</p>
+                <button class="btn btn-buy">Купить</button>
+            </div>
+            <div class="models-card">
+                <div class="card-img">
+                <img src="bl.snk.jpg" loading="lazy"  alt="Кроссовки Stepway Pro">
+                </div>
+                <h3 class="models-text">Stepway Air</h3>
+                <p>12 990 ₽</p>
+                <button class="btn btn-buy">Купить</button>
+            </div>
+        </div>
+    </section>
+    <section class="features" id="features">
+        <h2>Кроссовки,которые выбирают
+            за качество и стиль.
+        </h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Комфорт</h3>
+                <p>Максимальное удобство для каждого дня.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Качество</h3>
+                <p>Надежные материалы и внимание к деталям.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Стиль</h3>
+                <p>Современный дизайн,который подчеркнет ваш образ.</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <img src="logo.jpg" loading="lazy"  class="footer-logo">
+    <p class="footer-slogan">Больше, чем кроссовки.</p>
+    <div class="footer-links">
+        <a href="#">Главная</a>
+        <a href="#models">Модели</a>
+        <a href="#features">О нас</a>
+        <a href="#">Instagram</a>
+        <a href="#">Telegram</a>
+    </div>
+    <p class="footer-copy">© 2025 Stepway</p>
+</footer>
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <button class="btn-close" id="btn-close">✕</button>
+        <h3>Оставить заявку</h3>
+        <input type="text" placeholder="Ваше имя">
+        <input type="tel" placeholder="Ваш телефон">
+        <button class="btn">Отправить</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
