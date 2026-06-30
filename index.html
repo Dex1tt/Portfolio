@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Моя визитка</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+    <button id="burger-btn">☰</button>
+    <div class="nav-links">
+        <a href="#about">Обо мне</a>
+        <a href="#projects">Проекты</a>
+        <a href="#skills">Мои навыки</a>
+        <a href="#contacts">Мои контакты</a>
+    </div>
+    <div class="nav-logo">
+        Максим
+        <span>Frontend Developer</span>
+    </div>
+    </nav>
+    <header>
+    <img src="avatar.png" alt="Максим" class="avatar">
+        <h1>
+            Сайты, которые работают на результат.
+        </h1>
+        <p>
+            Адаптивные сайты и приложения на чистом коде — быстро, без CMS.
+        </p>
+        <div class="hero-buttons">
+        <a href="https://t.me/Dex_1t" class="btn-primary">Написать в Telegram</a>
+        <a href="#projects" class="btn-secondary">Смотреть проекты</a>
+        </div>
+    </header>
+    <main>
+    <section class="about" id="about">
+        <h2>Обо мне:</h2>
+        <p class="about_me">
+            Создаю адаптивные сайты и веб-приложения на чистом HTML, CSS и JavaScript — без шаблонов и тяжёлых конструкторов. 
+        За плечами несколько проектов: от лендингов с анимациями до приложений с интеграцией внешних API.
+        Подхожу к каждому проекту как к инструменту бизнеса — сайт должен не просто хорошо выглядеть, а решать задачу клиента.
+        </p>
+    </section>     
+    <section class="skills" id="skills">
+        <h2>Навыки:</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Flexbox</li>
+            <li>JavaScript</li>
+            <li>localStorage</li>
+            <li>API</li>
+            <li>Chart.js</li>
+        </ul>
+    </section>
+    <section class="contacts" id="contacts">
+        <h2>Контакты:</h2>
+        <p class="contact-cta">Нужен сайт или лендинг? Напишите в Telegram — отвечу в течение дня.</p>
+        <ul>   
+        <li>✈️Telegram
+             <a href="https://t.me/Dex_1t">@Dex_1t</a>
+        </li>
+            <li>📧Email:
+            <a href="mailto:mgocarenko212@gmail.com">mgocarenko212@gmail.com</a>
+        </li>
+        <li>🐙Github
+            <a href="https://github.com/Dex1tt" target="_blank">github.com/Dex1tt</a>
+        </li>
+        </ul>
+    </section>
+    <section class="projects" id="projects">
+        <h2>Проекты:</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+            <h3>Stepway - интернет-магазин обуви </h3>
+            <p>Адаптивный лендинг для бренда обуви — решает проблему медленных, неудобных на мобильных магазинов: быстрая загрузка и удобная навигация прямо к покупке</p>
+                <ul>
+                    <li>
+                        HTML
+                    </li>
+                    <li>
+                        CSS
+                    </li>
+                    <li>
+                        JS
+                    </li>
+                    <li>
+                        Adaptive
+                    </li>
+                </ul>
+                <a href="https://dex1tt.github.io/Stepway-Landing-Page/" class="project-link">Смотреть →</a>
+            </div>
+            <div class="project-card">
+            <h3>WeatherApp - сайт прогноза погоды</h3>
+            <p>Прогноз погоды без визуального шума — данные через API подаются с динамическим фоном, чтобы обстановку было видно сразу, а не вчитываться в цифры.</p>
+                <ul>
+                    <li>
+                        HTML
+                    </li>
+                    <li>
+                        CSS
+                    </li>
+                    <li>
+                        JS
+                    </li>
+                    <li>
+                        API
+                    </li>
+                </ul>
+                <a href="https://dex1tt.github.io/weather-app/" class="project-link">Смотреть →</a>
+            </div>
+            <div class="project-card">
+            <h3>Focus - Все задачи на своём месте </h3>
+            <p>Таск-менеджер, который не теряет задачи при перезагрузке — данные сохраняются в localStorage, плюс фильтры и счётчик для контроля прогресса.</p>
+                <ul>
+                    <li>
+                        HTML
+                    </li>
+                    <li>
+                        CSS
+                    </li>
+                    <li>
+                        JS
+                    </li>
+                    <li>
+                        localStorage
+                    </li>
+                </ul>
+                <a href="https://dex1tt.github.io/todo-app/" class="project-link">Смотреть →</a>
+            </div>
+             <div class="project-card">
+            <h3>Cashwise - быстро и просто</h3>
+            <p>Cashwise — конвертер валют на vanilla JS с реальными курсами через ExchangeRate API. Реализованы история конвертаций, график курса за 7 дней, анимации и флаги валют.</p>
+                <ul>
+                    <li>
+                        HTML
+                    </li>
+                    <li>
+                        CSS
+                    </li>
+                    <li>
+                        JS
+                    </li>
+                    <li>
+                        API
+                    </li>
+                    <li>
+                        localStorage
+                    </li>
+                    <li>
+                        Chart.js
+                    </li>
+                </ul>
+                <a href="https://dex1tt.github.io/currency-app/" class="project-link">Смотреть →</a>
+            </div>
+            <div class="project-card">
+            <h3>CineVerse - Открой мир кино за секунды</h3>
+            <p>Поиск фильмов и сериалов с фильтрами и рейтингами через TMDB API — экономит время на поиск, а не тратит его.</p>
+                <ul>
+                    <li>
+                        HTML
+                    </li>
+                    <li>
+                        CSS
+                    </li>
+                    <li>
+                        JS
+                    </li>
+                    <li>
+                        Fetch API
+                    </li>
+                    <li>
+                        TMDB API
+                    </li>
+                </ul>
+                <a href="https://dex1tt.github.io/films-app/" class="project-link">Смотреть →</a>
+            </div>
+        </div>
+    </section>
+    </main>
+    <footer>
+        © 2026 Максим. Все права защищены.
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
