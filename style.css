@@ -1,0 +1,824 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- Тёмная тема (весь сайт) ---------- */
+:root {
+    --bg: #111113;
+    --bg-page: #111113;
+    --bg-nav: #0c0c0e;
+    --bg-nav-bar: rgba(12, 12, 14, 0.92);
+    --bg-card: #18181b;
+    --border: #27272a;
+    --text: #f4f4f5;
+    --text-primary: #f4f4f5;
+    --text-secondary: #a1a1aa;
+    --muted: #a1a1aa;
+    --accent: #f4f4f5;
+    --on-accent: #111113;
+}
+
+/* ---------- Светлая тема только для меню и первого экрана ---------- */
+nav,
+header {
+    --bg: #f6f5f2;
+    --bg-page: #f6f5f2;
+    --bg-nav: #f6f5f2;
+    --bg-nav-bar: rgba(246, 245, 242, 0.85);
+    --bg-card: #ffffff;
+    --border: #e4e2dc;
+    --text: #111113;
+    --text-primary: #111113;
+    --text-secondary: #6b6b72;
+    --accent: #111113;
+    --on-accent: #ffffff;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 3px 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+h1 {
+    margin-bottom: 16px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: var(--text);
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* ---------- Навигация ---------- */
+nav {
+    background-color: var(--bg-nav-bar);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 20px;
+    padding: 18px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: var(--text-secondary);
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--text);
+}
+
+.nav-brand {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    color: var(--text);
+}
+
+.nav-brand b {
+    font-family: 'Yellowtail', 'Brush Script MT', cursive;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1;
+}
+
+.nav-brand span {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    font-size: 14px;
+}
+
+nav a.active {
+    color: var(--text);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 1px;
+}
+
+.nav-cta {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    padding: 10px 20px;
+    border: 1px solid var(--text);
+    border-radius: 999px;
+    transition: all 0.2s;
+}
+
+.nav-cta:hover {
+    background: var(--text);
+    color: var(--on-accent);
+}
+
+#burger-btn {
+    order: 2;
+    display: none;
+}
+
+/* ---------- Hero ---------- */
+header {
+    background-color: var(--bg);
+    background-image: radial-gradient(rgba(17, 17, 19, 0.07) 1px, transparent 1px);
+    background-size: 28px 28px;
+    color: var(--text);
+    text-align: center;
+    padding: 100px 24px 110px;
+    position: relative;
+    border-bottom: none;
+    border-radius: 0 0 48px 48px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 40%, var(--bg) 100%);
+    pointer-events: none;
+}
+
+header > * {
+    position: relative;
+    z-index: 1;
+}
+
+.logo-mark {
+    font-family: 'Yellowtail', 'Brush Script MT', cursive;
+    font-size: 84px;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.logo-sub {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+
+.logo-sub::before,
+.logo-sub::after {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--text-secondary);
+}
+
+header h1 {
+    font-size: clamp(30px, 5vw, 52px);
+    letter-spacing: -0.02em;
+    max-width: 760px;
+    margin: 0 auto 18px;
+    animation: fadeIn 1s ease;
+    animation-fill-mode: both;
+}
+
+header p {
+    max-width: 520px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: var(--text-secondary);
+    animation: fadeIn 1s ease;
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 34px;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--on-accent);
+    padding: 12px 24px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-primary:hover {
+    background: #ffffff;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 12px 24px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+    background: rgba(244, 244, 245, 0.06);
+    border-color: var(--text-secondary);
+}
+
+/* кнопки в светлой шапке: свой hover, иначе белое на светлом */
+header .btn-primary:hover {
+    background: #2a2a2e;
+    box-shadow: 0 10px 24px rgba(17, 17, 19, 0.18);
+}
+
+header .btn-secondary:hover {
+    background: #ffffff;
+    border-color: var(--text);
+}
+
+.hero-facts {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+    margin-top: 52px;
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.hero-facts span::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--text);
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* ---------- Секции ---------- */
+.about,
+.skills,
+.contacts,
+.services {
+    padding: 20px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 20px;
+    transition: border-color 0.3s ease;
+}
+
+.service-card:hover {
+    border-color: var(--text-secondary);
+}
+
+/* ------ Проекты ------ */
+.projects {
+    padding: 15px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card p {
+    margin-bottom: 16px;
+    color: var(--text-secondary);
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--text-secondary);
+}
+
+.project-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.project-card li,
+.skills li {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.project-link {
+    background-color: var(--accent);
+    color: var(--on-accent);
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.project-link:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* ------ О нас ------ */
+.about_me {
+    font-size: 18px;
+    color: var(--text-secondary);
+}
+
+/* ------ Контакты ------ */
+.contacts-grid h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.contacts-grid p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    text-wrap: balance;
+    max-width: 560px;
+}
+
+.contacts-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.contacts-top .btn-primary {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.status-dot {
+    background: #4ade80;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.15);
+}
+
+.contacts-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 20px;
+    color: var(--text);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--text-secondary);
+}
+
+.contact-card small {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.contact-card strong {
+    font-size: 17px;
+}
+
+.contact_icons {
+    width: 52px;
+    height: 52px;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    object-fit: contain;
+    flex-shrink: 0;
+    filter: invert(1);
+}
+
+/* ------ Форма ------ */
+.contacts-form {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px;
+}
+/* ---------- Экран «Спасибо» после отправки формы ---------- */
+.contacts-form {
+    position: relative;
+    overflow: hidden;
+}
+
+.form-success {
+    position: absolute;
+    inset: 0;
+    background: #111113;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 28px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s;
+}
+
+.contacts-form.sent .form-success {
+    opacity: 1;
+    visibility: visible;
+}
+
+.success-icon {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 20px;
+}
+
+.success-circle {
+    stroke: #4ade80;
+    stroke-width: 2;
+    stroke-dasharray: 151;
+    stroke-dashoffset: 151;
+}
+
+.success-check {
+    stroke: #4ade80;
+    stroke-width: 3.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 40;
+    stroke-dashoffset: 40;
+}
+
+.contacts-form.sent .success-circle {
+    animation: draw 0.6s ease forwards;
+}
+
+.contacts-form.sent .success-check {
+    animation: draw 0.4s ease 0.5s forwards;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.form-success h3 {
+    font-size: 36px;
+    margin-bottom: 8px;
+    color: #f4f4f5;
+}
+
+.form-success p {
+    color: #a1a1aa;
+    max-width: none;
+    margin-bottom: 24px;
+}
+
+.success-again {
+    background: transparent;
+    border: 1px solid #27272a;
+    color: #a1a1aa;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.success-again:hover {
+    color: #f4f4f5;
+    border-color: #a1a1aa;
+}
+
+.form-msg:empty {
+    display: none;
+}
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.form-field {
+    margin-bottom: 14px;
+}
+
+.form-msg {
+    margin-top: 14px;
+    font-size: 14px;
+}
+
+.form-msg.ok {
+    color: #4ade80;
+}
+
+.form-msg.err {
+    color: #f87171;
+}
+
+.contact-btn:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.contacts-form label {
+    display: block;
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+}
+
+.contacts-form input,
+.contacts-form select,
+.contacts-form textarea {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 14px;
+    color: var(--text);
+    font: inherit;
+    font-weight: 400;
+}
+
+.contacts-form input:focus,
+.contacts-form select:focus,
+.contacts-form textarea:focus {
+    outline: none;
+    border-color: var(--text-secondary);
+}
+
+.contacts-form textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.contacts-form option {
+    background: var(--bg-card);
+    color: var(--text);
+}
+
+.contacts-form select {
+    appearance: none;
+    padding-right: 40px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23a1a1aa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+}
+
+.contact-btn {
+    background: var(--accent);
+    color: var(--on-accent);
+    padding: 12px 24px;
+    border-radius: 20px;
+    border: none;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.contact-btn:hover {
+    background: #ffffff;
+    transform: translateY(-1px);
+}
+
+/* ------ Футер ------ */
+footer {
+    background-color: var(--bg-nav);
+    border-top: 1px solid var(--border);
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 20px;
+}
+
+/* ---------- Анимации ---------- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about,
+.skills,
+.contacts {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.about.visible,
+.skills.visible,
+.contacts.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---------- Мобильная версия ---------- */
+@media (max-width: 768px) {
+    nav {
+        padding: 14px 20px;
+    }
+
+    .nav-brand {
+        order: 1;
+    }
+
+    .nav-cta {
+        display: none;
+    }
+
+    header {
+        padding: 70px 20px 80px;
+    }
+
+    .logo-mark {
+        font-size: 64px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .contacts-grid h2 {
+        font-size: 24px;
+    }
+
+    .project-card ul {
+        flex-wrap: wrap;
+    }
+
+    .project-card li,
+    .skills li {
+        font-size: 13px;
+        padding: 5px 12px;
+    }
+
+    .project-link {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-facts {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    footer {
+        font-size: 13px;
+    }
+
+    #burger-btn {
+        display: block;
+        background: transparent;
+        border: none;
+        color: var(--text);
+        font-size: 24px;
+        cursor: pointer;
+        order: 2;
+    }
+
+    .nav-links {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        flex-direction: column;
+        background-color: var(--bg-page);
+        border: 1px solid var(--border);
+        padding: 15px 20px;
+        border-radius: 0 0 10px 10px;
+        gap: 10px;
+        width: auto;
+        text-align: left;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.3s ease, opacity 0.2s ease;
+    }
+
+    .nav-links.open {
+        max-height: 400px;
+        opacity: 1;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contacts-cards,
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
